@@ -17,6 +17,10 @@ public class Area {
     /**
      * @param args the command line arguments
      */
+    //presentado por:
+    //Edwin Andres Salinas Chaparro 20172020087
+    //Daniel Felipe Camargo Roa 20172020078
+    //Diego Velez 20172020075
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("¿QUE TIPO DE FIGURA SE VA A ANALIZAR?");

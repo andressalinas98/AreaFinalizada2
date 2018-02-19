@@ -14,7 +14,7 @@ public class rectangulo extends Datos {
     public void solucion (){
         area=(s/2)*s;
         perimetro=s*3;
-    System.out.println("El area del cuadrado es: "+ area);
-    System.out.println("El perimetro del cuadrado es: "+ perimetro);
+    System.out.println("El area del rectangulo es: "+ area);
+    System.out.println("El perimetro del rectangulo es: "+ perimetro);
     }
 }
