@@ -1,22 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package area;
 
 import java.util.Scanner;
 import area.solucion.*;
 import area.solucion.cuadrado;
-/**
- *
- * @author Estudiantes
- */
+
 public class Area {
 
-    /**
-     * @param args the command line arguments
-     */
     //presentado por:
     //Edwin Andres Salinas Chaparro 20172020087
     //Daniel Felipe Camargo Roa 20172020078
@@ -29,37 +19,40 @@ public class Area {
         System.out.println("3.Triangulo Rectangulo");
         System.out.println("4.Circulo");
         int opcion = sc.nextInt();
-        int x1, x2, y1, y2,s;
-        System.out.println("Ingres la posicion del punto 1 en el eje X");
+        int x1, x2, y1, y2;
+        System.out.println("Ingrese X1");
         x1 = sc.nextInt();
-        System.out.println("Ingres la posicion del punto 1 en el eje y");
+        System.out.println("Ingrese Y1");
         y1 = sc.nextInt();
-        System.out.println("Ingres la posicion del punto 2 en el eje X");
+        System.out.println("Ingrese X2");
         x2 = sc.nextInt();
-        System.out.println("Ingres la posicion del punto 2 en el eje y");
+        System.out.println("Ingrese Y1");
         y2 = sc.nextInt();
-        s=((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));
-        Datos d= null;
+        
+        Puntos pt = new Puntos();
+        pt.setP(x1, y1, x2, y2);
+        double s = pt.dist();
+        
         switch (opcion) {
             case 1:
-                d = new cuadrado ();
+                cuadrado sqrt = new cuadrado ();
+                sqrt.solucion(s);
                 break;
             case 2:
-                d = new rectangulo ();
+                rectangulo rect = new rectangulo ();
+                rect.setP(x1, y1, x2, y2);
+                rect.solucion(s);
                 break;
             case 3:
-                d = new triangulo ();
+                triangulo trig = new triangulo ();
+                trig.setP(x1, y1, x2, y2);
+                trig.solucion(s);
                 break;
             case 4:
-                d = new circulo ();
+                circulo circ = new circulo ();
+                circ.solucion(s);
                 break;
         }
-        d.setX1 (x1);
-        d.setY1 (y1);
-        d.setX2 (x2);
-        d.setY1 (y2);
-        d.setS (s);
-        d.solucion ();
     }
 
 }

@@ -1,19 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package area.solucion;
 
-/**
- *
- * @author Estudiantes
- */
 public class rectangulo extends Datos {
+    
+    @Override
+    public void setP(int x1, int y1, int x2, int y2){
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+    
      @Override
-    public void solucion (){
-        area=(s/2)*s;
-        perimetro=s*3;
+    public void solucion (double s){
+        
+        Puntos R = new Puntos();
+        R.setP(x1, y1, x2, y2);
+        
+        base = R.Base();
+        altura = R.Altura();
+        
+        area=((base*altura));
+        perimetro=((2*base)+(2*altura));
+        
     System.out.println("El area del rectangulo es: "+ area);
     System.out.println("El perimetro del rectangulo es: "+ perimetro);
     }
